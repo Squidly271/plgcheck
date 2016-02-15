@@ -12,8 +12,8 @@ $server = strtoupper($var['NAME']);
 $unraid = parse_plugin_cfg("dynamix",true);
 $output = $unraid['notify']['plugin'];
 
-if ( is_file("/boot/config/plugins/pluginchecker/versions") ){
-  $versions = json_decode(file_get_contents("/boot/config/plugins/pluginchecker/versions"),true);
+if ( is_file("/boot/config/plugins/plgcheck/versions") ){
+  $versions = json_decode(file_get_contents("/boot/config/plugins/plgcheck/versions"),true);
 }
 
 $pluginInstalled = array_diff(scandir("/var/log/plugins"),array(".",".."));
@@ -44,8 +44,8 @@ foreach ($pluginInstalled as $plugin) {
 }
 
 if ( $flag ) {
-  exec("mkdir -p /boot/config/plugins/pluginchecker");
-  file_put_contents("/boot/config/plugins/pluginchecker/versions",json_encode($versions, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT));
+  exec("mkdir -p /boot/config/plugins/plgcheck");
+  file_put_contents("/boot/config/plugins/plgcheck/versions",json_encode($versions, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT));
 }
 
 
