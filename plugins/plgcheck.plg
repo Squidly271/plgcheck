@@ -2,7 +2,7 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name      "plgcheck">
 <!ENTITY author    "Squid">
-<!ENTITY version   "2016.02.15a">
+<!ENTITY version   "2016.02.15b">
 <!ENTITY md5       "2ecfc8fa08c50435827e04d318899f8d">
 <!ENTITY plugdir   "/usr/local/emhttp/plugins/&name;">
 <!ENTITY github    "Squidly271/plgcheck">
